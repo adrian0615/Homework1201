@@ -22,7 +22,7 @@ func turn(_ direction: Direction, currentOrientation: Orientation) -> Orientatio
     switch (currentOrientation, direction) {
     case (.north, .left):
         return .west
-        case (.north, .right):
+    case (.north, .right):
         return .east
     case (.south, .right):
         return .west
@@ -41,31 +41,33 @@ func turn(_ direction: Direction, currentOrientation: Orientation) -> Orientatio
 
 typealias Location = (x: Int, y: Int)
 
-func move(blocks: Int, _ orientation: Orientation, from location: (x: Int, y: Int)) -> (x: Int, y: Int) {
+func move(_ blocks: Int, _ orientation: Orientation, from location: (x: Int, y: Int)) -> Location {
     switch orientation {
     case .north:
-        return (x, y + blocks)
+        return (location.x, location.y + blocks)
     case .south:
-        return (location.x, y - blocks)
+        return (location.x, location.y - blocks)
     case .east:
-        return (location.y, x + blocks)
+        return (location.x + blocks, location.y)
     case .west:
-        return (location.y, x - blocks)
+        return (location.x - blocks, location.y)
     }
     
 }
 
 
 func follow(instructions: [(Direction, Int)]) -> Location {
-    var curretOrientation: Orientation = .north
+    var currentOrientation: Orientation = .north
     var currentLocation: Location = (0,0)
     for (direction, blocks) in instructions {
         currentOrientation = turn(direction, currentOrientation: currentOrientation)
         
         currentLocation = move(blocks, currentOrientation, from: currentLocation)
     }
+    return currentLocation
 }
 
 
+follow(instructions: directions)
 
 

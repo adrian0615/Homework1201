@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C2609BDF4CCEA5A1EE4522205629A30644B3FCCE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CB31EE023BA5C83B57FFB82C5C7FE0B2C470BCA1" : 9223372036854775807,
+    "C2609BDF4CCEA5A1EE4522205629A30644B3FCCE" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4F035B0D-AE44-428F-8853-53D5B92A7F7B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CB31EE023BA5C83B57FFB82C5C7FE0B2C470BCA1" : "",
+    "C2609BDF4CCEA5A1EE4522205629A30644B3FCCE" : "Homework1201\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "1201Homework",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "1201Homework.playground",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/adrian0615\/Homework1201.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C2609BDF4CCEA5A1EE4522205629A30644B3FCCE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/adrian0615\/Homework-Submission.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CB31EE023BA5C83B57FFB82C5C7FE0B2C470BCA1"
+    }
+  ]
+}
