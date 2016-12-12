@@ -16,13 +16,17 @@ enum Instruction {
     
 }
 
+enum Orientation {
+    case north, south, east, west
+}
+
 
 
 
 typealias Location = (x: Int, y: Int)
 
-func turn(_ direction: Instruction, currentOrientation: Instruction) -> Instruction {
-    switch (currentOrientation, direction) {
+func turn(_ instruction: Instruction, currentOrientation: Orientation) -> Orientation {
+    switch (currentOrientation, instruction) {
     case (.north, .left):
         return .west
     case (.north, .right):
@@ -39,13 +43,20 @@ func turn(_ direction: Instruction, currentOrientation: Instruction) -> Instruct
         return .south
     case (.west, .right):
         return .north
-    default:
-        return currentOrientation
+    case (_, .east):
+        return .east
+    case (_, .west):
+        return .west
+    case (_, .north):
+        return .north
+        case (_, .south):
+        return .south
+        
     }
 }
 
 
-func move(_ blocks: Int, _ orientation: Instruction, from location: (x: Int, y: Int)) -> Location {
+func move(_ blocks: Int, _ orientation: Orientation, from location: (x: Int, y: Int)) -> Location {
     switch orientation {
     case .north:
         return (location.x, location.y + blocks)
@@ -55,8 +66,6 @@ func move(_ blocks: Int, _ orientation: Instruction, from location: (x: Int, y: 
         return (location.x + blocks, location.y)
     case .west:
         return (location.x - blocks, location.y)
-    default:
-        return (location)
     }
     
 }
@@ -64,7 +73,7 @@ func move(_ blocks: Int, _ orientation: Instruction, from location: (x: Int, y: 
 
 
 func follow(instructions: [(Instruction, Int)]) -> Location {
-    var currentOrientation: Instruction = .north
+    var currentOrientation: Orientation = .north
     var currentLocation: Location = (0,0)
     for (direction, blocks) in instructions {
         currentOrientation = turn(direction, currentOrientation: currentOrientation)
